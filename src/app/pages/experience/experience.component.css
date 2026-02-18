@@ -1,0 +1,38 @@
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+.page-header { margin-bottom: 3rem; }
+.label { display: inline-block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding: 0.2rem 0.75rem; background: rgba(196,30,58,0.1); border-radius: 999px; border: 1px solid rgba(196,30,58,0.2); margin-bottom: 0.6rem; }
+.page-title { font-size: clamp(2rem,5vw,3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+.page-sub { color: var(--text-muted); font-size: 0.97rem; max-width: 540px; }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; }
+
+.tl-item { display: flex; gap: 1.5rem; }
+
+.tl-track { display: flex; flex-direction: column; align-items: center; padding-top: 0.4rem; flex-shrink: 0; }
+
+.tl-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 14px rgba(196,30,58,0.5); flex-shrink: 0; }
+
+.tl-line { flex: 1; width: 2px; background: linear-gradient(to bottom, rgba(196,30,58,0.35), transparent); margin: 8px 0; min-height: 32px; }
+
+.exp-card { flex: 1; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; margin-bottom: 1.5rem; transition: border-color 0.2s, background 0.2s; }
+.exp-card:hover { border-color: rgba(196,30,58,0.3); background: var(--bg-card-hover); }
+
+.exp-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
+
+.exp-role { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem; }
+.exp-company { font-size: 1rem; color: var(--accent); font-weight: 600; }
+
+.exp-right { text-align: right; }
+.exp-period { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.35rem; }
+.exp-type { display: inline-block; font-size: 0.75rem; background: rgba(196,30,58,0.1); color: var(--accent); padding: 0.15rem 0.65rem; border-radius: 999px; border: 1px solid rgba(196,30,58,0.2); }
+
+.exp-desc { font-size: 0.94rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.65; }
+
+.exp-bullets { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.25rem; }
+.exp-bullets li { font-size: 0.9rem; color: var(--text-sub); line-height: 1.55; }
+
+.exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.tag { display: inline-block; padding: 0.25rem 0.7rem; border: 1px solid var(--border); border-radius: 999px; font-size: 0.8rem; color: var(--text-muted); }

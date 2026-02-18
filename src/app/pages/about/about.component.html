@@ -1,0 +1,51 @@
+<div class="page-wrap">
+  <div class="page-header">
+    <span class="label">Sobre mí</span>
+    <h1 class="page-title">Quién soy</h1>
+  </div>
+
+  <!-- Bio + Stats -->
+  <section class="bio-section">
+    <div class="bio-text">
+      <p>{{ data.about }}</p>
+      <p>Actualmente curso <strong>Ingeniería de Sistemas en la CUN</strong> (2021 – Actualidad).
+         Me apasiona el diseño de sistemas robustos, la automatización y el aprendizaje continuo.</p>
+    </div>
+    <div class="stats-col">
+      <div class="stat-card" *ngFor="let s of data.stats">
+        <span class="stat-num">{{ s.num }}</span>
+        <span class="stat-label">{{ s.label }}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Idiomas -->
+  <section class="section">
+    <h2 class="sec-title">Idiomas</h2>
+    <div class="lang-list">
+      <div class="lang-item" *ngFor="let l of data.languages">
+        <div class="lang-row">
+          <span class="lang-name">{{ l.name }}</span>
+          <span class="lang-level">{{ l.level }}</span>
+          <span class="lang-pct">{{ l.pct }}%</span>
+        </div>
+        <div class="lang-bar">
+          <div class="lang-fill" [style.width.%]="l.pct"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack técnico -->
+  <section class="section">
+    <h2 class="sec-title">Stack técnico</h2>
+    <div class="stack-grid">
+      <div class="stack-card" *ngFor="let cat of data.stack">
+        <h3 class="stack-cat">{{ cat.category }}</h3>
+        <ul class="stack-items">
+          <li *ngFor="let item of cat.items" class="stack-item">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

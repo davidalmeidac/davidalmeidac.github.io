@@ -1,0 +1,35 @@
+<div class="page-wrap">
+  <div class="page-header">
+    <span class="label">Trayectoria</span>
+    <h1 class="page-title">Experiencia laboral</h1>
+    <p class="page-sub">Empresas donde he trabajado, roles que he desempeñado y tecnologías que he utilizado.</p>
+  </div>
+
+  <div class="timeline">
+    <div *ngFor="let exp of data.experience; let last = last" class="tl-item">
+      <div class="tl-track">
+        <div class="tl-dot"></div>
+        <div class="tl-line" *ngIf="!last"></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-head">
+          <div class="exp-info">
+            <h2 class="exp-role">{{ exp.role }}</h2>
+            <p class="exp-company">{{ exp.company }}</p>
+          </div>
+          <div class="exp-right">
+            <span class="exp-period">{{ exp.period }}</span>
+            <span class="exp-type">{{ exp.type }}</span>
+          </div>
+        </div>
+        <p class="exp-desc">{{ exp.description }}</p>
+        <ul class="exp-bullets">
+          <li *ngFor="let b of exp.bullets">{{ b }}</li>
+        </ul>
+        <div class="exp-tags">
+          <span *ngFor="let t of exp.tags" class="tag">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
